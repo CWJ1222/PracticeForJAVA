@@ -12,11 +12,11 @@ public class Ex22 {
     }
 }
 
-class Person {
+class Person232 {
     String name;
     int age;
 
-    Person(String name, int age) {
+    Person232(String name, int age) {
         this.name = name;
         this.age = age;
     }

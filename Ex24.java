@@ -50,11 +50,11 @@ public class Ex24 {
     }
 }
 
-class Person {
+class Person67 {
     String name;
     int age;
 
-    Person(String name, int age) {
+    Person67(String name, int age) {
         this.name = name;
         this.age = age;
     }
