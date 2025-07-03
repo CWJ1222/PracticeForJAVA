@@ -63,11 +63,11 @@ public class Ex23 {
     }
 }
 
-class Person {
+class Person1 {
     String name;
     int age;
 
-    Person(String name, int age) {
+    Person1(String name, int age) {
         this.name = name;
         this.age = age;
 
