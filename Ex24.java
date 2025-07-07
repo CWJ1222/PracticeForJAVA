@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Ex24 {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            ArrayList<Person> people = new ArrayList<>();
+            ArrayList<Person67> people = new ArrayList<>();
 
             System.out.println("사람 정보를 입력하세요. 종료하려면 q를 입력하세요.");
             // while (true) {
@@ -38,12 +38,12 @@ public class Ex24 {
                     continue; // 다시 입력 받기
                 }
 
-                people.add(new Person(name, age));
+                people.add(new Person67(name, age));
             }
 
             // 전체정보 출력
             System.out.println("\n입력된 사람들의 정보: ");
-            for (Person person : people) {
+            for (Person67 person : people) {
                 person.introduce();
             }
         }
