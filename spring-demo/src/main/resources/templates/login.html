@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .links {
+            text-align: center;
+        }
+        .links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: #dc3545;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>로그인</h1>
+        
+        <div th:if="${param.error}" class="error">
+            이메일 또는 비밀번호가 올바르지 않습니다.
+        </div>
+        
+        <form th:action="@{/login}" method="post">
+            <div class="form-group">
+                <label for="username">이메일:</label>
+                <input type="email" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit">로그인</button>
+        </form>
+        
+        <div class="links">
+            <a href="/users">회원가입</a>
+            <a href="/">홈으로</a>
+        </div>
+    </div>
+</body>
+</html> 
